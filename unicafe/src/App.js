@@ -18,6 +18,7 @@ const App = () => {
   const h1 = "give feedback";
   const h2 = "statistics";
   const all = stat.left+stat.center+stat.right;
+  const avg = ((stat.left * 1) + (stat.right * -1))/all;
   
   return (
     <>
@@ -33,6 +34,7 @@ const App = () => {
         <Data text="neutral" total={stat.center} />
         <Data text="bad" total={stat.right} />
         <Data text="all" total={all} />
+        <Data text="average" total={avg} />
       </div>
     </>
   )
