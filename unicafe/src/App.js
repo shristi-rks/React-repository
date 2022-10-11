@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Button from './Components/Button'
 import { Heading } from './Components/Heading'
-import Data from './Components/Data'
+import Statistics from './Components/Statistics'
 
 const App = () => {
   // save clicks of each button to its own state
@@ -31,12 +31,12 @@ const positive = `${stat.left/all*100}% `;
       </div>
       <Heading contents = {h2} />
       <div>
-        <Data text="good" total={stat.left} />
-        <Data text="neutral" total={stat.center} />
-        <Data text="bad" total={stat.right} />
-        <Data text="all" total={all} />
-        <Data text="average" total={avg} />
-        <Data text="positive" total={positive} />
+        <Statistics text="good" total={stat.left} />
+        <Statistics text="neutral" total={stat.center} />
+        <Statistics text="bad" total={stat.right} />
+        <Statistics text="all" total={all} />
+        <Statistics text="average" total={avg} />
+        <Statistics text="positive" total={positive} />
       </div>
     </>
   )
