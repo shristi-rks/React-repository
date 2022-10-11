@@ -1,3 +1,4 @@
+import StatisticLine from './Components/StatisticLine'
 const Statistics = ({text, total, stat}) => {
     const all = stat.left+stat.center+stat.right;
     const avg = ((stat.left * 1) + (stat.right * -1))/all;
@@ -7,14 +8,13 @@ const Statistics = ({text, total, stat}) => {
        return  <p>Feedback not given</p>;
     }
     return  (
-        <>
-        <p> good {stat.left} </p>
-        <p> neutral {stat.center} </p>
-        <p> bad {stat.right} </p>
-        <p>all {all}</p>
-        <p>average {avg}</p>
-        <p>positive {positive}</p>
-        </>
+        <div>
+        <StatisticLine text="good" value ={stat.left} />
+        <StatisticLine text="neutral" value ={stat.center} />
+        <StatisticLine text="bad" value ={stat.right} />
+        <StatisticLine text="average" value ={avg} />
+        <StatisticLine text="positive" value ={positive} />
+      </div>
     )
 };
 export default Statistics;
