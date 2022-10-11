@@ -19,6 +19,7 @@ const App = () => {
   const h2 = "statistics";
   const all = stat.left+stat.center+stat.right;
   const avg = ((stat.left * 1) + (stat.right * -1))/all;
+const positive = `${stat.left/all*100}% `;
   
   return (
     <>
@@ -35,6 +36,7 @@ const App = () => {
         <Data text="bad" total={stat.right} />
         <Data text="all" total={all} />
         <Data text="average" total={avg} />
+        <Data text="positive" total={positive} />
       </div>
     </>
   )
