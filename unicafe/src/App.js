@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Button from './Components/Button'
-import Heading from './Components/Heading'
+import { Heading } from './Components/Heading'
 import Data from './Components/Data'
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
   const h2 = "statistics";
   
   return (
-    <div>
+    <>
       <Heading contents = {h1} />
       <div>
         <Button handleClick={handleGoodClick} text="good" />
@@ -30,11 +30,11 @@ const App = () => {
       </div>
       <Heading contents = {h2} />
       <div>
-      < Data text="good" total={good.left} />
+        <Data text="good" total={good.left} />
         <Data text="neutral" total={neutral.center} />
         <Data text="bad" total={bad.right} />
       </div>
-    </div>
+    </>
   )
 }
 
