@@ -17,10 +17,7 @@ const App = () => {
   };
   const h1 = "give feedback";
   const h2 = "statistics";
-  const all = stat.left+stat.center+stat.right;
-  const avg = ((stat.left * 1) + (stat.right * -1))/all;
-const positive = `${stat.left/all*100}% `;
-  
+
   return (
     <>
       <Heading contents = {h1} />
@@ -31,12 +28,7 @@ const positive = `${stat.left/all*100}% `;
       </div>
       <Heading contents = {h2} />
       <div>
-        <Statistics text="good" total={stat.left} />
-        <Statistics text="neutral" total={stat.center} />
-        <Statistics text="bad" total={stat.right} />
-        <Statistics text="all" total={all} />
-        <Statistics text="average" total={avg} />
-        <Statistics text="positive" total={positive} />
+        <Statistics text="good" total={stat.left} stat={stat} />
       </div>
     </>
   )
