@@ -1,0 +1,1 @@
+export const Button = ({handleClick}) => <button onClick={handleClick}>next ancedote</button>;
