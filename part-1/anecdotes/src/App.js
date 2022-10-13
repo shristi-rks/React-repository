@@ -1,4 +1,5 @@
 import { Button } from './Components/Button'
+import { Heading } from './Components/Heading';
 
 const App = () => {
   const anecdotes = [
@@ -15,6 +16,7 @@ const App = () => {
    
   return (
     <div>
+      <Heading content = "Anecdote of the day" />
       <div>
       <Button anecdotes={anecdotes} />
       </div>
