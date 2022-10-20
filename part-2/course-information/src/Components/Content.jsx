@@ -1,15 +1,11 @@
-export const Part = (props) => {
-    return  <p>{props.name}  {props.exercise}</p>
-}
+export const Part = ({course}) => course.map((course)=> 
+    <li key = {course.id}>{course.name}  {course.exercises}</li>
+)
+
+
 const Content = ({course}) => {
     console.log({course})
-    return (
-        <>
-        <Part name = {course.parts[0].name}  exercise = {course.parts[0].exercises} />
-        <Part name = {course.parts[1].name}  exercise = {course.parts[1].exercises} />
-        <Part name = {course.parts[2].name}  exercise = {course.parts[2].exercises} /> 
-        </>  
-    )
-};
+    return <Part course = {course} />
+}
 
 export default Content;
