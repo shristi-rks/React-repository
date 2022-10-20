@@ -17,6 +17,7 @@ export const Button = ({anecdotes}) => {
         console.log(vote);  
         console.log(copy)  ; 
         console.log(selected);   
+        
     };  
     const max = Math.max(...copy);
     for (let i = 0; i < copy.length; i++ ) {
